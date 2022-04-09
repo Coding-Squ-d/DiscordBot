@@ -1,3 +1,4 @@
 # Prevent modification of the .editorconfig file
 
 .editorconfig	@brianb12321
+.github			@brianb12321
