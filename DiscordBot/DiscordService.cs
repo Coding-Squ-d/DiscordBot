@@ -18,7 +18,7 @@ namespace DiscordBot
         }
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            string secret = Environment.GetEnvironmentVariable("DISCORD_BOT_SECRET", EnvironmentVariableTarget.User | EnvironmentVariableTarget.Process | EnvironmentVariableTarget.Machine);
+            string secret = Environment.GetEnvironmentVariable("DISCORD_BOT_SECRET");
             _logger.LogInformation($"DO NOT DO THIS: Token is \"{secret}\"");
             _client.Log += _client_Log;
             _client.Ready += _client_Ready;
