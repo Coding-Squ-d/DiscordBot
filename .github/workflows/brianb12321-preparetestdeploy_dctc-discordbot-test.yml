@@ -6,7 +6,7 @@ name: Build and deploy ASP.Net Core app to Azure Web App - dctc-discordbot-test
 on:
   push:
     branches:
-      - master
+      - staging
   workflow_dispatch:
 
 jobs:
