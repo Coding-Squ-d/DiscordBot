@@ -1,0 +1,3 @@
+# Prevent modification of the .editorconfig file
+
+.editorconfig	@brianb12321
