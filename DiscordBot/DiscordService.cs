@@ -1,11 +1,14 @@
 ﻿using Discord;
+using Discord.Interactions;
 using Discord.WebSocket;
+using DiscordBot.Modules;
 
 namespace DiscordBot
 {
     public class DiscordService : BackgroundService
     {
         private DiscordSocketClient _client;
+        private InteractionService _interactionService;
         private ILogger<DiscordService> _logger;
 
         public DiscordService(ILogger<DiscordService> logger)
@@ -26,9 +29,17 @@ namespace DiscordBot
             await _client.StartAsync();
         }
 
-        private Task _client_Ready()
+        private async Task _client_Ready()
         {
-            return Task.CompletedTask;
+            _interactionService = new InteractionService(_client);
+
+            await _interactionService.AddModuleAsync<EchoModule>(null);
+            await _interactionService.RegisterCommandsToGuildAsync(957341221733404782);
+            _client.InteractionCreated += async interaction =>
+            {
+                var ctx = new SocketInteractionContext(_client, interaction);
+                await _interactionService.ExecuteCommandAsync(ctx, null);
+            };
         }
 
         public override async Task StopAsync(CancellationToken cancellationToken)
