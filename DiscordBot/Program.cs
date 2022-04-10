@@ -1,9 +1,16 @@
 using DiscordBot;
+using DiscordBot.Core;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddSingleton<ISecretManager>(provider =>
+{
+    var manager = new EnvironmentSecretManager();
+    manager.SetEnvironmentScope();
+    return manager;
+});
 builder.Services.AddHostedService<DiscordService>();
 
 var app = builder.Build();

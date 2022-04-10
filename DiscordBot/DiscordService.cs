@@ -1,6 +1,7 @@
 ﻿using Discord;
 using Discord.Interactions;
 using Discord.WebSocket;
+using DiscordBot.Core;
 using DiscordBot.Modules;
 
 namespace DiscordBot
@@ -10,30 +11,20 @@ namespace DiscordBot
         private DiscordSocketClient _client;
         private InteractionService _interactionService;
         private ILogger<DiscordService> _logger;
+        private ISecretManager _secretManager;
 
-        public DiscordService(ILogger<DiscordService> logger)
+        public DiscordService(ILogger<DiscordService> logger, ISecretManager secretManager)
         {
             _client = new DiscordSocketClient(new DiscordSocketConfig()
             {
                 LogLevel = LogSeverity.Debug
             });
             _logger = logger;
+            _secretManager = secretManager;
         }
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            string secret;
-            if(Environment.GetEnvironmentVariable("DISCORD_BOT_WINDOWS_SCOPE") == "User")
-            {
-                secret = Environment.GetEnvironmentVariable("DISCORD_BOT_SECRET", EnvironmentVariableTarget.User);
-            }
-            else if (Environment.GetEnvironmentVariable("DISCORD_BOT_WINDOWS_SCOPE") == "Machine")
-            {
-                secret = Environment.GetEnvironmentVariable("DISCORD_BOT_SECRET", EnvironmentVariableTarget.Machine);
-            }
-            else
-            {
-                secret = Environment.GetEnvironmentVariable("DISCORD_BOT_SECRET");
-            }
+            string secret = _secretManager.GetDiscordBotSecret();
             _logger.LogInformation($"DO NOT DO THIS: Token is \"{secret}\"");
             _client.Log += _client_Log;
             _client.Ready += _client_Ready;
@@ -46,7 +37,7 @@ namespace DiscordBot
             _interactionService = new InteractionService(_client);
 
             await _interactionService.AddModuleAsync<EchoModule>(null);
-            await _interactionService.RegisterCommandsToGuildAsync(957341221733404782);
+            await _interactionService.RegisterCommandsToGuildAsync(_secretManager.GetSecret<ulong>("DISCORD_BOT_GUILDID"));
             _client.InteractionCreated += async interaction =>
             {
                 var ctx = new SocketInteractionContext(_client, interaction);
