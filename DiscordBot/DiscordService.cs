@@ -21,7 +21,19 @@ namespace DiscordBot
         }
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            string secret = Environment.GetEnvironmentVariable("DISCORD_BOT_SECRET");
+            string secret;
+            if(Environment.GetEnvironmentVariable("DISCORD_BOT_WINDOWS_SCOPE") == "User")
+            {
+                secret = Environment.GetEnvironmentVariable("DISCORD_BOT_SECRET", EnvironmentVariableTarget.User);
+            }
+            else if (Environment.GetEnvironmentVariable("DISCORD_BOT_WINDOWS_SCOPE") == "Machine")
+            {
+                secret = Environment.GetEnvironmentVariable("DISCORD_BOT_SECRET", EnvironmentVariableTarget.Machine);
+            }
+            else
+            {
+                secret = Environment.GetEnvironmentVariable("DISCORD_BOT_SECRET");
+            }
             _logger.LogInformation($"DO NOT DO THIS: Token is \"{secret}\"");
             _client.Log += _client_Log;
             _client.Ready += _client_Ready;
