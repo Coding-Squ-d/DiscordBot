@@ -46,6 +46,7 @@ namespace DiscordBot
             _interactionService = new InteractionService(_client);
 
             await _interactionService.AddModuleAsync<EchoModule>(null);
+            await _interactionService.AddModuleAsync<TutorModule>(null);
             await _interactionService.RegisterCommandsToGuildAsync(957341221733404782);
             _client.InteractionCreated += async interaction =>
             {

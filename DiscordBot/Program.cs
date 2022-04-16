@@ -1,3 +1,5 @@
+//NOT SAFE FOR CHILDREN; KEEP OUT
+
 using DiscordBot;
 
 var builder = WebApplication.CreateBuilder(args);
