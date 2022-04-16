@@ -1,0 +1,34 @@
+### YamlMime:ManagedReference
+items:
+- uid: DiscordBot.Pages
+  commentId: N:DiscordBot.Pages
+  id: DiscordBot.Pages
+  children:
+  - DiscordBot.Pages.ErrorModel
+  - DiscordBot.Pages.IndexModel
+  - DiscordBot.Pages.PrivacyModel
+  langs:
+  - csharp
+  - vb
+  name: DiscordBot.Pages
+  nameWithType: DiscordBot.Pages
+  fullName: DiscordBot.Pages
+  type: Namespace
+  assemblies:
+  - DiscordBot
+references:
+- uid: DiscordBot.Pages.ErrorModel
+  commentId: T:DiscordBot.Pages.ErrorModel
+  name: ErrorModel
+  nameWithType: ErrorModel
+  fullName: DiscordBot.Pages.ErrorModel
+- uid: DiscordBot.Pages.IndexModel
+  commentId: T:DiscordBot.Pages.IndexModel
+  name: IndexModel
+  nameWithType: IndexModel
+  fullName: DiscordBot.Pages.IndexModel
+- uid: DiscordBot.Pages.PrivacyModel
+  commentId: T:DiscordBot.Pages.PrivacyModel
+  name: PrivacyModel
+  nameWithType: PrivacyModel
+  fullName: DiscordBot.Pages.PrivacyModel

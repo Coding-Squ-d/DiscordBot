@@ -1,0 +1,34 @@
+### YamlMime:ManagedReference
+items:
+- uid: DiscordBot.Core
+  commentId: N:DiscordBot.Core
+  id: DiscordBot.Core
+  children:
+  - DiscordBot.Core.EnvironmentSecretManager
+  - DiscordBot.Core.ISecretManager
+  langs:
+  - csharp
+  - vb
+  name: DiscordBot.Core
+  nameWithType: DiscordBot.Core
+  fullName: DiscordBot.Core
+  type: Namespace
+  assemblies:
+  - DiscordBot
+references:
+- uid: DiscordBot.Core.ISecretManager
+  commentId: T:DiscordBot.Core.ISecretManager
+  parent: DiscordBot.Core
+  name: ISecretManager
+  nameWithType: ISecretManager
+  fullName: DiscordBot.Core.ISecretManager
+- uid: DiscordBot.Core.EnvironmentSecretManager
+  commentId: T:DiscordBot.Core.EnvironmentSecretManager
+  name: EnvironmentSecretManager
+  nameWithType: EnvironmentSecretManager
+  fullName: DiscordBot.Core.EnvironmentSecretManager
+- uid: DiscordBot.Core
+  commentId: N:DiscordBot.Core
+  name: DiscordBot.Core
+  nameWithType: DiscordBot.Core
+  fullName: DiscordBot.Core

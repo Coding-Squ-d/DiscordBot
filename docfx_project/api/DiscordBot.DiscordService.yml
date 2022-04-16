@@ -1,0 +1,289 @@
+### YamlMime:ManagedReference
+items:
+- uid: DiscordBot.DiscordService
+  commentId: T:DiscordBot.DiscordService
+  id: DiscordService
+  parent: DiscordBot
+  children:
+  - DiscordBot.DiscordService.#ctor(ILogger{DiscordBot.DiscordService},DiscordBot.Core.ISecretManager)
+  - DiscordBot.DiscordService.ExecuteAsync(CancellationToken)
+  - DiscordBot.DiscordService.StopAsync(CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: DiscordService
+  nameWithType: DiscordService
+  fullName: DiscordBot.DiscordService
+  type: Class
+  source:
+    remote:
+      path: DiscordBot/DiscordService.cs
+      branch: brianb12321-createDocumentation
+      repo: git@github.com:Coding-Squ-d/DiscordBot.git
+    id: DiscordService
+    path: ../DiscordBot/DiscordService.cs
+    startLine: 8
+  assemblies:
+  - DiscordBot
+  namespace: DiscordBot
+  syntax:
+    content: 'public class DiscordService : BackgroundService'
+    content.vb: >-
+      Public Class DiscordService
+          Inherits BackgroundService
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: DiscordBot.DiscordService.#ctor(ILogger{DiscordBot.DiscordService},DiscordBot.Core.ISecretManager)
+  commentId: M:DiscordBot.DiscordService.#ctor(ILogger{DiscordBot.DiscordService},DiscordBot.Core.ISecretManager)
+  id: '#ctor(ILogger{DiscordBot.DiscordService},DiscordBot.Core.ISecretManager)'
+  parent: DiscordBot.DiscordService
+  langs:
+  - csharp
+  - vb
+  name: DiscordService(ILogger<DiscordService>, ISecretManager)
+  nameWithType: DiscordService.DiscordService(ILogger<DiscordService>, ISecretManager)
+  fullName: DiscordBot.DiscordService.DiscordService(ILogger<DiscordBot.DiscordService>, DiscordBot.Core.ISecretManager)
+  type: Constructor
+  source:
+    remote:
+      path: DiscordBot/DiscordService.cs
+      branch: brianb12321-createDocumentation
+      repo: git@github.com:Coding-Squ-d/DiscordBot.git
+    id: .ctor
+    path: ../DiscordBot/DiscordService.cs
+    startLine: 15
+  assemblies:
+  - DiscordBot
+  namespace: DiscordBot
+  syntax:
+    content: public DiscordService(ILogger<DiscordService> logger, ISecretManager secretManager)
+    parameters:
+    - id: logger
+      type: ILogger{DiscordBot.DiscordService}
+    - id: secretManager
+      type: DiscordBot.Core.ISecretManager
+    content.vb: Public Sub New(logger As ILogger(Of DiscordService), secretManager As ISecretManager)
+  overload: DiscordBot.DiscordService.#ctor*
+  nameWithType.vb: DiscordService.DiscordService(ILogger(Of DiscordService), ISecretManager)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: DiscordBot.DiscordService.DiscordService(ILogger(Of DiscordBot.DiscordService), DiscordBot.Core.ISecretManager)
+  name.vb: DiscordService(ILogger(Of DiscordService), ISecretManager)
+- uid: DiscordBot.DiscordService.ExecuteAsync(CancellationToken)
+  commentId: M:DiscordBot.DiscordService.ExecuteAsync(CancellationToken)
+  id: ExecuteAsync(CancellationToken)
+  parent: DiscordBot.DiscordService
+  langs:
+  - csharp
+  - vb
+  name: ExecuteAsync(CancellationToken)
+  nameWithType: DiscordService.ExecuteAsync(CancellationToken)
+  fullName: DiscordBot.DiscordService.ExecuteAsync(CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: DiscordBot/DiscordService.cs
+      branch: brianb12321-createDocumentation
+      repo: git@github.com:Coding-Squ-d/DiscordBot.git
+    id: ExecuteAsync
+    path: ../DiscordBot/DiscordService.cs
+    startLine: 24
+  assemblies:
+  - DiscordBot
+  namespace: DiscordBot
+  syntax:
+    content: protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+    parameters:
+    - id: stoppingToken
+      type: CancellationToken
+    return:
+      type: Task
+    content.vb: Protected Overrides Function ExecuteAsync(stoppingToken As CancellationToken) As Task
+  overload: DiscordBot.DiscordService.ExecuteAsync*
+  modifiers.csharp:
+  - protected
+  - override
+  - async
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: DiscordBot.DiscordService.StopAsync(CancellationToken)
+  commentId: M:DiscordBot.DiscordService.StopAsync(CancellationToken)
+  id: StopAsync(CancellationToken)
+  parent: DiscordBot.DiscordService
+  langs:
+  - csharp
+  - vb
+  name: StopAsync(CancellationToken)
+  nameWithType: DiscordService.StopAsync(CancellationToken)
+  fullName: DiscordBot.DiscordService.StopAsync(CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: DiscordBot/DiscordService.cs
+      branch: brianb12321-createDocumentation
+      repo: git@github.com:Coding-Squ-d/DiscordBot.git
+    id: StopAsync
+    path: ../DiscordBot/DiscordService.cs
+    startLine: 47
+  assemblies:
+  - DiscordBot
+  namespace: DiscordBot
+  syntax:
+    content: public override async Task StopAsync(CancellationToken cancellationToken)
+    parameters:
+    - id: cancellationToken
+      type: CancellationToken
+    return:
+      type: Task
+    content.vb: Public Overrides Function StopAsync(cancellationToken As CancellationToken) As Task
+  overload: DiscordBot.DiscordService.StopAsync*
+  modifiers.csharp:
+  - public
+  - override
+  - async
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: DiscordBot
+  commentId: N:DiscordBot
+  name: DiscordBot
+  nameWithType: DiscordBot
+  fullName: DiscordBot
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DiscordBot.DiscordService.#ctor*
+  commentId: Overload:DiscordBot.DiscordService.#ctor
+  name: DiscordService
+  nameWithType: DiscordService.DiscordService
+  fullName: DiscordBot.DiscordService.DiscordService
+- uid: ILogger{DiscordBot.DiscordService}
+  commentId: '!:ILogger{DiscordBot.DiscordService}'
+  definition: ILogger`1
+  name: ILogger<DiscordService>
+  nameWithType: ILogger<DiscordService>
+  fullName: ILogger<DiscordBot.DiscordService>
+  nameWithType.vb: ILogger(Of DiscordService)
+  fullName.vb: ILogger(Of DiscordBot.DiscordService)
+  name.vb: ILogger(Of DiscordService)
+  spec.csharp:
+  - uid: ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: ILogger
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DiscordBot.DiscordService
+    name: DiscordService
+    nameWithType: DiscordService
+    fullName: DiscordBot.DiscordService
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: ILogger
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DiscordBot.DiscordService
+    name: DiscordService
+    nameWithType: DiscordService
+    fullName: DiscordBot.DiscordService
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DiscordBot.Core.ISecretManager
+  commentId: T:DiscordBot.Core.ISecretManager
+  parent: DiscordBot.Core
+  name: ISecretManager
+  nameWithType: ISecretManager
+  fullName: DiscordBot.Core.ISecretManager
+- uid: ILogger`1
+  isExternal: true
+  name: ILogger<>
+  nameWithType: ILogger<>
+  fullName: ILogger<>
+  nameWithType.vb: ILogger(Of )
+  fullName.vb: ILogger(Of )
+  name.vb: ILogger(Of )
+  spec.csharp:
+  - uid: ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: ILogger
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: ILogger
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DiscordBot.Core
+  commentId: N:DiscordBot.Core
+  name: DiscordBot.Core
+  nameWithType: DiscordBot.Core
+  fullName: DiscordBot.Core
+- uid: DiscordBot.DiscordService.ExecuteAsync*
+  commentId: Overload:DiscordBot.DiscordService.ExecuteAsync
+  name: ExecuteAsync
+  nameWithType: DiscordService.ExecuteAsync
+  fullName: DiscordBot.DiscordService.ExecuteAsync
+- uid: CancellationToken
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: CancellationToken
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: DiscordBot.DiscordService.StopAsync*
+  commentId: Overload:DiscordBot.DiscordService.StopAsync
+  name: StopAsync
+  nameWithType: DiscordService.StopAsync
+  fullName: DiscordBot.DiscordService.StopAsync

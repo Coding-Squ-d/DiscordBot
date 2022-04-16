@@ -37,8 +37,8 @@ namespace DiscordBot
             _interactionService = new InteractionService(_client);
 
             await _interactionService.AddModuleAsync<EchoModule>(null);
-            await _interactionService.RegisterCommandsToGuildAsync(_secretManager.GetSecret<ulong>("DISCORD_BOT_GUILDID"));
             await _interactionService.AddModuleAsync<TutorModule>(null);
+            await _interactionService.RegisterCommandsToGuildAsync(_secretManager.GetSecret<ulong>("DISCORD_BOT_GUILDID"));
 
             _client.InteractionCreated += async interaction =>
             {
@@ -51,7 +51,7 @@ namespace DiscordBot
         {
             await _client.LogoutAsync();
             await _client.StopAsync();
-            _client.Dispose();
+            await _client.DisposeAsync();
         }
 
         private Task _client_Log(LogMessage msg)

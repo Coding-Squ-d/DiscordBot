@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: DiscordBot.Modules
+  commentId: N:DiscordBot.Modules
+  id: DiscordBot.Modules
+  children:
+  - DiscordBot.Modules.EchoModule
+  langs:
+  - csharp
+  - vb
+  name: DiscordBot.Modules
+  nameWithType: DiscordBot.Modules
+  fullName: DiscordBot.Modules
+  type: Namespace
+  assemblies:
+  - DiscordBot
+references:
+- uid: DiscordBot.Modules.EchoModule
+  commentId: T:DiscordBot.Modules.EchoModule
+  name: EchoModule
+  nameWithType: EchoModule
+  fullName: DiscordBot.Modules.EchoModule
