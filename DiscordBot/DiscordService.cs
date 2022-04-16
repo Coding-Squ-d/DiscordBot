@@ -38,6 +38,8 @@ namespace DiscordBot
 
             await _interactionService.AddModuleAsync<EchoModule>(null);
             await _interactionService.RegisterCommandsToGuildAsync(_secretManager.GetSecret<ulong>("DISCORD_BOT_GUILDID"));
+            await _interactionService.AddModuleAsync<TutorModule>(null);
+
             _client.InteractionCreated += async interaction =>
             {
                 var ctx = new SocketInteractionContext(_client, interaction);
