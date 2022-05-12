@@ -7,7 +7,7 @@ namespace DiscordBot.Modules
         [SlashCommand("tutor", "Need tutoring help? Run this command")]
         public async Task Tutor()
         {
-            await RespondAsync("Your tutor link is: ");
+            await RespondAsync("Your tutor Brian Barnes link is: ");
         }
     }
 }
